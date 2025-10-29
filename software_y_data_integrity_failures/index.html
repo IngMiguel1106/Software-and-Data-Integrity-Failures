@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>🔒 Software & Data Integrity Failures</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>🔒 Software & Data Integrity Failures</h1>
+                <p>Laboratorio Interactivo de Verificación de Integridad con
+                    Checksum y SRI</p>
+            </div>
+
+            <!-- 1️⃣ Checksum -->
+            <div class="section">
+                <h2><span class="badge">1</span> Verificación de Integridad con
+                    Checksum</h2>
+
+                <div class="info-box">
+                    <strong>💡 ¿Qué es un Checksum?</strong>
+                    Es un valor criptográfico calculado a partir de datos para
+                    verificar su integridad.
+                    Cualquier cambio mínimo en los datos (incluso un solo bit)
+                    produce un checksum diferente.
+                </div>
+
+                <div class="input-group">
+                    <label><span class="icon">📄</span> Selecciona un
+                        archivo:</label>
+                    <input type="file" id="fileInput" accept="*/*" />
+                </div>
+
+                <div class="input-group">
+                    <label><span class="icon">✏️</span> O escribe texto
+                        personalizado:</label>
+                    <textarea id="textInput"
+                        placeholder="Escribe texto aquí..."></textarea>
+                </div>
+
+                <button onclick="calculateHashes()">🔐 Calcular Hashes</button>
+                <button onclick="clearChecksum()">🗑️ Limpiar
+                    Resultados</button>
+                <div id="checksumResult"></div>
+            </div>
+
+            <!-- 2️⃣ Subresource Integrity -->
+            <div class="section">
+                <h2><span class="badge">2</span> Subresource Integrity
+                    (SRI)</h2>
+
+                <div class="info-box">
+                    <strong>💡 ¿Qué es SRI?</strong>
+                    Permite verificar que archivos externos (como CSS/JS de
+                    CDNs) no han sido manipulados.
+                    Usa los atributos <code>integrity</code> y
+                    <code>crossorigin</code>.
+                </div>
+
+                <div class="input-group">
+                    <label><span class="icon">🔗</span> URL del recurso externo
+                        (CDN):</label>
+                    <input
+                        type="text"
+                        id="cdnUrl"
+                        placeholder="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+                </div>
+
+                <button onclick="generateSRI()">🔐 Generar Hash SRI</button>
+                <button onclick="testSRI()">✅ Probar SRI en Navegador</button>
+                <div id="sriResult"></div>
+            </div>
+
+            <!-- 3️⃣ Comparador de Hashes -->
+            <div class="section">
+                <h2><span class="badge">3</span> Integrity Checker - Comparación
+                    de Hashes</h2>
+
+                <div class="info-box">
+                    <strong>💡 Verificación de Integridad:</strong>
+                    Compara el hash calculado de un archivo con el hash oficial.
+                    Si no coinciden, el archivo fue modificado.
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>📊 Hash Calculado</h4>
+                        <input type="text" id="calculatedHash"
+                            placeholder="Pega tu hash calculado" />
+                    </div>
+
+                    <div class="card">
+                        <h4>📋 Hash Esperado (Oficial)</h4>
+                        <input type="text" id="expectedHash"
+                            placeholder="Pega el hash oficial" />
+                    </div>
+                </div>
+
+                <button onclick="verifyIntegrity()">🔍 Verificar
+                    Integridad</button>
+                <button onclick="clearIntegrity()">🧹 Limpiar Campos</button>
+                <div id="integrityResult"></div>
+            </div>
+
+        </div>
+
+        <script src="js/integrity.js"></script>
+    </body>
+</html>
