@@ -21,21 +21,23 @@ software_y_data_integrity_failures/
 ```
 ## ▶️ Instrucciones de uso
 
-### 1.Instala Python 3.9
+### 1. Ejecución
+Clonar el repositorio:
 ```bash
-sudo apt install python3.9 -y
+git clone [https://github.com/IngMiguel1106/Software-and-Data-Integrity-Failures.git](https://github.com/IngMiguel1106/Software-and-Data-Integrity-Failures.git)
+cd software_y_data_integrity_failures
 ```
-### 1.dd
-```bash
-ls -la
-```
-### 2. dd
-```bash
-chmod +x (Nombre del)
-```
-### 3. Ejecutar 
+### 2.Ejecutar el script de laboratorio: 
 ```bash
 ./run_lab.sh
+```
+### 3. El servidor de iniciará en:
+```bash
+(http://0.0.0.0:8000/)
+```
+### 3. Abrir el navegador e ir a la URL destinada:
+```bash
+(http://0.0.0.0:8000/)
 ```
 ### 3. Apagar el servidor 
 Ejecuta esto para ver qué proceso está usando el puerto 8000:
@@ -44,11 +46,11 @@ sudo lsof -i :8000
 ```
 ### .1  Detén el proceso que ocupa el puerto (mirar bien el número de proceso (PID))
 ```bash
-kill -9 10456
+sudo lsof -i :8000
 ```
 1. Clonar el repositorio y entrar al directorio:
 ```bash
-git clone <repo-url>
+git clone [https://github.com/IngMiguel1106/Software-and-Data-Integrity-Failures.git](https://github.com/IngMiguel1106/Software-and-Data-Integrity-Failures.git)
 cd software_y_data_integrity_failures
 ```
 
