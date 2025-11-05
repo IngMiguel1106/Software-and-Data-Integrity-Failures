@@ -35,24 +35,20 @@ cd software_y_data_integrity_failures
 ```bash
 (http://0.0.0.0:8000/)
 ```
-### 3. Abrir el navegador e ir a la URL destinada:
+### 4. Abrir el navegador e ir a la URL destinada:
 ```bash
 (http://0.0.0.0:8000/)
 ```
-### 3. Apagar el servidor
+### 5. Apagar el servidor
 Ejecuta esto para ver qué proceso está usando el puerto 8000:
 ```bash
 sudo kill -9 <PID>
 ```
-### .1  Detén el proceso que ocupa el puerto (mirar bien el número de proceso (PID))
+### 6.  Detén el proceso que ocupa el puerto (mirar bien el número de proceso (PID))
 ```bash
 Ctrl+c o automaticamente se detendrá con 'run-lab.sh
 ```
-1. Clonar el repositorio y entrar al directorio:
-```bash
-git clone [https://github.com/IngMiguel1106/Software-and-Data-Integrity-Failures.git](https://github.com/IngMiguel1106/Software-and-Data-Integrity-Failures.git)
-cd software_y_data_integrity_failures
-```
+
 
 
 
